@@ -1,0 +1,30 @@
+angular.module('starter.controllers', [])
+
+.controller('HomeCtrl', function($scope) {})
+
+.controller('PinchesCtrl', function($scope, Pinches) {
+	$scope.pinches = Pinches.all();
+  	$scope.remove = function(pinch) {
+  		Pinches.remove(pinch);
+  	}
+})
+
+.controller('PinchDetailCtrl', function($scope, $stateParams, Pinches) {
+	$scope.pinch = Pinches.get($stateParams.pinchId);
+})
+
+.controller('AddCtrl', function($scope, $stateParams, Pinches) {
+	$scope.addItem = function(form) {
+        var newPinch = {};
+        
+        // Add values from form to object
+        newPinch.pinchMessage = form.pinchMessage.$modelValue;
+        
+        // Save new list in scope and factory
+        $scope.pinches.push(newPinch);
+        
+        Pinches.setPinch($scope.pinches);
+        // Close dialog
+        $scope.leaveAddChangeDialog();
+      };
+});

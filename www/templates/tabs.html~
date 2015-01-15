@@ -1,0 +1,26 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Homie Tab -->
+  <ion-tab title="Home" icon-off="ion-ios7-home" icon-on="ion-ios7-home" href="#/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Pinches Tab -->
+  <ion-tab title="Pinches" icon-off="ion-ios7-chatboxes-outline" icon-on="ion-ios7-chatboxes" href="#/tab/pinches">
+    <ion-nav-view name="tab-pinches"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Add Pinch Tab -->
+  <ion-tab title="Add Pinch" icon-off="ion-ios7-plus-outline" icon-on="ion-ios7-plus-outline" ng-controller="AddCtrl" ng-click="showPopup()" href="#/tab/add">
+    <ion-nav-view name="tab-add"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>

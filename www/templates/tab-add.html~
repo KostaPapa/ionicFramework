@@ -1,0 +1,27 @@
+<ion-view view-title="Add Pinch"> 
+	<ion-content>
+
+      <form ng-submit="createTask(pinch)">
+        <div class="pinchMessage">
+          <label class="item item-input">
+            <input type="text" placeholder="pinch message" ng-model="pinch.message">
+          </label>
+        </div>
+        <div class="username">
+          <label class="item item-input">
+            <input type="text" placeholder="user name" ng-model="pinch.userId">
+          </label>
+        </div>
+        <div class="picture">
+          <label class="item item-input">
+            <input type="file" placeholder="picture" ng-model="pinch.face">
+            <button type="upload" class="button button-block button-royal">Upload Picture</button>
+          </label>
+        </div>
+        <div class="padding">
+          <button type="submit" class="button button-block button-calm">Add Pinch</button>
+        </div>
+      </form>
+
+    </ion-content>
+</ion-view>

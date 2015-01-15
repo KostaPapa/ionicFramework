@@ -1,0 +1,9 @@
+<ion-view view-title="Pinch"> 
+	<ion-content class="padding">
+		<img ng-src="{{pinch.face}}" style="width: 64px; height: 64px">
+		<h2>{{pinch.userId}}</h2>
+    	<p>
+    		{{pinch.message}}
+    	</p>
+  	</ion-content>
+</ion-view>
